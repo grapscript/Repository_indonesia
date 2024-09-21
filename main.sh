@@ -30,13 +30,13 @@ clear
 clear && clear && clear
 clear;clear;clear
 echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e "${BIBlue}│    ${BGCOLOR} WELCOME TO MY SCRIPT PREMIUM  ${BIBlue} │${NC}"
+echo -e "${BIBlue}│${BGCOLOR}WELCOME TO MY SCRIPT JURAGAN HC${BIBlue}│${NC}"
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo ""
 sleep 4
 clear
 echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e "${BIBlue}│ ${BGCOLOR}         MASUKKAN NAMA KAMU  ${NC}${BIBlue} │${NC}"
+echo -e "${BIBlue}│ ${BGCOLOR}             MASUKKAN NAMA KAMU         ${NC}${BIBlue} │${NC}"
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $name =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -91,9 +91,9 @@ echo -e "\e[32mloading...\e[0m"
 clear
 clear
 rm -f /usr/bin/user
-username=$(curl https://raw.githubusercontent.com/extracepat/permission/main/izin | grep $MYIP | awk '{print $2}')
+username=$(curl https://raw.githubusercontent.com/extracepat/permission/main/ip | grep $MYIP | awk '{print $2}')
 echo "$username" >/usr/bin/user
-expx=$(curl https://raw.githubusercontent.com/extracepat/permission/main/izin | grep $MYIP | awk '{print $3}')
+expx=$(curl https://raw.githubusercontent.com/extracepat/permission/main/ip | grep $MYIP | awk '{print $3}')
 echo "$expx" >/usr/bin/e
 username=$(cat /usr/bin/user)
 oid=$(cat /usr/bin/ver)
@@ -112,7 +112,7 @@ mai="datediff "$Exp" "$DATE""
 Info="(${green}Active${NC})"
 Error="(${RED}Expired${NC})"
 today=`date -d "0 days" +"%Y-%m-%d"`
-Exp1=$(curl https://raw.githubusercontent.com/extracepat/permission/main/izin | grep $MYIP | awk '{print $4}')
+Exp1=$(curl https://raw.githubusercontent.com/extracepat/permission/main/ip | grep $MYIP | awk '{print $4}')
 if [[ $today < $Exp1 ]]; then
 sts="${Info}"
 else
@@ -280,20 +280,20 @@ fi
 }
 clear
 restart_system() {
-USRSC=$(wget -qO- https://raw.githubusercontent.com/extracepat/permission/main/izin | grep $ipsaya | awk '{print $2}')
-EXPSC=$(wget -qO- https://raw.githubusercontent.com/extracepat/permission/main/izin | grep $ipsaya | awk '{print $3}')
+USRSC=$(wget -qO- https://raw.githubusercontent.com/extracepat/permission/main/ip | grep $ipsaya | awk '{print $2}')
+EXPSC=$(wget -qO- https://raw.githubusercontent.com/extracepat/permission/main/ip | grep $ipsaya | awk '{print $3}')
 TIMEZONE=$(printf '%(%H:%M:%S)T')
 TEXT="
 <code>🧿───────────────────🧿</code>
-      <b>ɪɴsᴛᴀʟʟ ᴀᴜᴛᴏsᴄʀɪᴘᴛ ᴘʀᴇᴍɪᴜᴍ</b>
+             <b>ɴᴏᴛɪғɪᴋᴀsɪ ɪɴsᴛᴀʟʟ</b>
 <code>🧿───────────────────🧿</code>
 <code>ɪᴅ    : </code><code>$USRSC</code>
 <code>ᴅᴀᴛᴇ  : </code><code>$TIME</code>
 <code>ᴛɪᴍᴇ  : </code><code>$TIMEZONE</code>
 <code>ᴇxᴘ   : </code><code>$EXPSC</code>
 <code>🧿───────────────────🧿</code>
-<i>ᴀᴜᴛᴏᴍᴀᴛɪᴄ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ғʀᴏᴍ ɢɪᴛʜᴜʙ ᴊᴜʀᴀɢᴀɴ </i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ɪɴsᴛᴀʟʟ","url":"https://t.me/JURAGAN_HC"},{"text":"ᴄʜᴀɴɴᴇʟ","url":"https://t.me/channeljuragan"}]]}'
+<i>ᴀᴜᴛᴏᴍᴀᴛɪᴄ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ғʀᴏᴍ ɢɪᴛʜᴜʙ</i>
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/JURAGAN_HC"},{"text":"ᴊᴏɪɴ","url":"https://t.me/juraganhc1"}]]}'
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
 clear
@@ -369,7 +369,7 @@ wget -O /etc/xray/config.json "${REPO}Cfg/config.json" >/dev/null 2>&1
 wget -O /etc/systemd/system/runn.service "${REPO}Fls/runn.service" >/dev/null 2>&1
 domain=$(cat /etc/xray/domain)
 IPVS=$(cat /etc/xray/ipvps)
-print_success "Core Xray 1.9.2 Latest Version"
+print_success "Core Xray 1.8.1 Latest Version"
 clear
 curl -s ipinfo.io/city >>/etc/xray/city
 curl -s ipinfo.io/org | cut -d " " -f 2-10 >>/etc/xray/isp
@@ -1025,7 +1025,7 @@ secs_to_human "$(($(date +%s) - ${start}))"
 sudo hostnamectl set-hostname $username
 clear
 echo -e "${BIBlue}╭════════════════════════════════════════════════════╮${NC}"
-echo -e "${BIBlue}│${BGCOLOR} SUCCESS INSTALL AUTOSCRIPT BY JURAGAN HC ${NC} ${BIBlue}│${NC}"
+echo -e "${BIBlue}│${BGCOLOR} SUCCESS INSTALL AUTOSCRIPT PREMIUM JURAGAN HC ${NC} ${BIBlue}│${NC}"
 echo -e "${BIBlue}╰════════════════════════════════════════════════════╯${NC}"
 echo -e ""
 echo -e "\033[93;1m please Wait in 5 second...\033[0m"
